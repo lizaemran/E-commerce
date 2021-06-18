@@ -1,53 +1,38 @@
-import React, {useState, useRef} from 'react';
-import Player from './components/Player';
-import Song from './components/Song';
+import React, { useState, useRef } from 'react';
 import './styles/app.scss';
 import data from './data';
-import Nav from './components/Nav';
-import Library from './components/Library';
+import NavBar from './components/navbar';
 import { library } from '@fortawesome/fontawesome-svg-core';
-function App() {
-  const audioRef = useRef(null);
-  const [songs, setSongs] = useState(data());
-  const [currentSong, setCurrentSong] = useState(songs[0]);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [songInfo, setSongInfo] = useState({
-    currentTime: 0,
-    duration: 0,
-    animationPercentage: 0,
-});
-const [libraryStatus, setlibraryStatus] = useState(false);
-const timeUpdateHandler = (e) => {
-  const current = e.target.currentTime;
-  const duration = e.target.duration;
-  console.log(duration);
-  const roundedCurrent=Math.round(current);
-  const roundedDuration=Math.round(duration);
-  const animation= Math.round((roundedCurrent/roundedDuration)* 100);
-  setSongInfo({...songInfo, currentTime: current, duration, animationPercentage: animation,});
-};
- const songEndHandler = async() => {
-  let currentIndex = songs.findIndex((song)=> song.id === currentSong.id);
-      await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      if (isPlaying) audioRef.current.play();
- }
-  return (
-    <div className={`App ${libraryStatus ? "library-active" : "" }`}>
-      <Nav libraryStatus={libraryStatus} setlibraryStatus={setlibraryStatus} />
-      <Song currentSong={currentSong}/>
-      <Player 
-      setSongs = {setSongs}
-      setCurrentSong = {setCurrentSong}
-      songs ={songs}
-      setSongInfo={setSongInfo}
-      songInfo={songInfo}
-      audioRef={audioRef}
-      setIsPlaying={setIsPlaying}
-      isPlaying={isPlaying}
-      currentSong={currentSong}/>
-      <Library libraryStatus={libraryStatus} setSongs={setSongs} isPlaying={isPlaying} audioRef={audioRef} songs={songs} setCurrentSong={setCurrentSong} />
-      <audio onEnded={songEndHandler} onLoadedMetadata= {timeUpdateHandler} onTimeUpdate={timeUpdateHandler} ref= {audioRef} src={currentSong.audio}></audio>
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages';
+import About from './pages/about';
+import Events from './pages/event';
+import AnnualReport from './pages/annual';
+import Teams from './pages/team';
+import Blogs from './pages/blog';
+import SignUp from './pages/signup';
 
+function App() {
+
+  return (
+    <div>
+      <Router>
+      <NavBar />
+      
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/about' render={()=>
+          <About imageURL='cover.jpg' boyimg='boychild.jpg' girlimg='girlchild.jpg' menimg='bigboy.jpg' womanimg='biggirl.jpg'/>
+         } />
+        <Route path='/events' render={()=>
+          <Events title='My title' body='This is a card which gives information about product.' imageURL='logo.PNG'/>
+         } />
+        <Route path='/annual' component={AnnualReport} />
+        <Route path='/team' component={Teams} />
+        <Route path='/blogs' component={Blogs} />
+        <Route path='/sign-up' component={SignUp} />
+      </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,25 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  body{
+     padding:0;
+     margin:0;
+  }
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 }
-h1, h2, h3 {
-    color: rgb(54, 54, 54);
+*::-webkit-scrollbar{
+    width: 10px;
 }
-body{
-    font-family: 'Lato', sans-serif;
+*::-webkit-scrollbar-track{
+    background: transparent;
 }
-h3, h4{
-    font-weight: 400;
-    color: rgb(100, 100, 100);
+*::-webkit-scrollbar-thumb{
+    background-color: rgba(231, 216, 216, 0.5);
+    border-radius: 20px;
+    border: transparent;
 }
-.App{
-transition: all 0.5s ease;
+.imgg{
+    width:5em; 
+    height:6em;
+    padding-left:0;
+    margin-left:0;
+    object-fit: contain;
+    vertical-align:text-top;
+    padding-right:25px;
+   
 }
-.library-active{
-    margin-left: 30%;
-}
-@import "./song";
-@import "./player";
-@import "./library";
-@import "./Nav";
+@import "./home";
+@import "./events";
+@import "./card";
