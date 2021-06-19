@@ -5,25 +5,33 @@ export const Nav = styled.nav`
   background: #ffffff;
   height: 85px;
   display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-left: 65px;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding-top: 08px;
+  padding-left: 55px;
   padding-right: 50px;
   padding-bottom: 20px;
   z-index: 12;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
-  
+
 export const NavLink = styled(Link)`
   color: #808080;
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 18px;
-  padding: 0 3rem;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  line-height:1.1;
+  padding-top: 0;
+  padding-bottom: 0;
   height: 100%;
   cursor: pointer;
+  padding-left:100px;
+  margin-left:10px;
   
   &.active {
     color: #000000;
@@ -53,7 +61,8 @@ export const NavMenu = styled.div`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  padding-left:50px;
+  padding-left:70px;
+  
   
   /* Third Nav */
   /* justify-content: flex-end;
@@ -78,7 +87,7 @@ export const NavBtnLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   /* Second Nav */
-  margin-left: 24px;
+  margin-left: 32px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #862e2e;

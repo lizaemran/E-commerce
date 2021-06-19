@@ -1,18 +1,67 @@
 import React from 'react'
-
-const team = () => {
+import NavBar from '../components/navbar';
+import Footer from '../components/Footer';
+import Card from '../components/card'
+const team = ({title, imageURL, body,saleimg}) => {
     return (
-        <div
-        style={{
-            display: 'flex',
-            justifyContent: 'Right',
-            alignItems: 'Right',
-            height: '100vh'
-          }}
-        >
-          <h1>Welcome to GeeksforGeeks Team</h1>
-            
+      <div>
+      <NavBar />
+      <div class="container-fluid" class="main-container" >
+        <img src={saleimg} alt="coverpic" id="saleCover" class="cover_pic" />    
         </div>
+        <div className="pc-block-title"> 
+        <h2 className="pc-title"></h2>
+        <h4 id="heading"> Welcome to our Store</h4>
+        <div className="pc-description">
+            <h6>View Our Products</h6>
+        </div>
+        </div>
+        <div className="divider">
+        <div class="hr-theme-slash-2">
+         <div class="hr-line"></div>
+            <div class="hr-icon"><i class="material-icons"></i>❤</div>
+            <div class="hr-line"></div>
+        </div>
+        </div>
+        <React.Fragment>
+    <div class="container-fluid" >
+    <div class="row justify-content-center">
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     </div>
+     <div class="row justify-content-center">
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     </div>
+     <div class="row justify-content-center">
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     </div>
+     </div>
+     <Footer />
+     </React.Fragment>
+    </div>
     )
 }
 

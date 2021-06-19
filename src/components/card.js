@@ -3,7 +3,6 @@ const card = ({title, imageURL, body}) => {
     return (
     
        <div>
-        
         <div className="card-container">
             <div className="image-container">
                 <img class="img-card"src={imageURL} alt="" />
@@ -24,7 +23,6 @@ const card = ({title, imageURL, body}) => {
             </div>
             </div>
         </div>
-        
         </div>
     )
 }

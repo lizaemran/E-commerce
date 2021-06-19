@@ -17,16 +17,38 @@
     border-radius: 20px;
     border: transparent;
 }
+#Sale{
+color: red;
+}
+#ban1{
+    width:24px; 
+    height:18px;
+}
+#ban2{
+    width:43px; 
+    height:16px;
+}
+#banner{
+    color:black; 
+    font-size:11px;
+    align-content:middle;
+}
+
+
+
 .imgg{
-    width:5em; 
+    width:5.5em; 
     height:6em;
     padding-left:0;
-    margin-left:0;
+    margin-left:-50px;
     object-fit: contain;
     vertical-align:text-top;
     padding-right:25px;
-   
+    
 }
 @import "./home";
 @import "./events";
 @import "./card";
+@import "./TopPanel.scss";
+@import "./footer.scss";
+@import "./sales.scss"

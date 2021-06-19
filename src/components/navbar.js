@@ -1,9 +1,10 @@
 import React from 'react'
 import { Nav, NavLink, NavMenu,NavBtn, NavBtnLink
   } from './NavbarElements';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCartArrowDown} from "@fortawesome/free-solid-svg-icons"
 const navbar = () => {
     return (
-            
             <Nav>
                 <NavMenu>
                 <img class="imgg" src="logo.PNG"  alt="Logo"/>
@@ -16,20 +17,21 @@ const navbar = () => {
                 <NavLink to='/annual' activeStyle>
                     Catalog
                 </NavLink>
-                <NavLink to='/team' activeStyle>
+                <NavLink id="Sale"to='/team' activeStyle>
                     Sale
                 </NavLink>
                 <NavLink to='/blogs' activeStyle>
-                    Support
+                    Stores
                 </NavLink>
                 <NavLink to='/sign-up' activeStyle>
                     Sign Up
                 </NavLink>
                 {/* Second Nav */}
                 {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+                
                 </NavMenu>
                 <NavBtn>
-                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+                <NavBtnLink to='/signin'><FontAwesomeIcon icon={faCartArrowDown}/></NavBtnLink>
                 </NavBtn>
             </Nav>
     

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './styles/app.scss';
 import data from './data';
 import NavBar from './components/navbar';
@@ -12,23 +12,32 @@ import Teams from './pages/team';
 import Blogs from './pages/blog';
 import SignUp from './pages/signup';
 
-function App() {
 
+function App() {
+  const [bill, setBill] = useState({
+    item: 0,
+    price: 0,
+  })
+ 
   return (
     <div>
-      <Router>
-      <NavBar />
       
+      <Router>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/about' render={()=>
-          <About imageURL='cover.jpg' boyimg='boychild.jpg' girlimg='girlchild.jpg' menimg='bigboy.jpg' womanimg='biggirl.jpg'/>
+          <About title='My title' body='This is a card which gives information about product.' bannerimg='mastercard.jpg' bannerimg2='visa.jpg' bannerimg3='banner3.jpg' imageURL='logo.PNG'coverimgURL='cover2.jpg' boyimg='boychild.jpg' girlimg='girlchild.jpg' menimg='bigboy.jpg' womanimg='biggirl.jpg'/>
          } />
+         
         <Route path='/events' render={()=>
           <Events title='My title' body='This is a card which gives information about product.' imageURL='logo.PNG'/>
          } />
-        <Route path='/annual' component={AnnualReport} />
-        <Route path='/team' component={Teams} />
+        <Route path='/annual'render={()=>
+          <AnnualReport title='My title' body='This is a card which gives information about product.' imageURL='logo.PNG'/>
+         } />
+        <Route path='/team' render={()=>
+          <Teams saleimg='cover4.png' title='My title' body='This is a card which gives information about product.' imageURL='logo.PNG'/>
+         } />
         <Route path='/blogs' component={Blogs} />
         <Route path='/sign-up' component={SignUp} />
       </Switch>

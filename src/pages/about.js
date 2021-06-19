@@ -1,37 +1,76 @@
-import React from 'react'
-
-const about = ({imageURL, boyimg, girlimg, menimg, womanimg}) => {
+import React from 'react';
+import Card from '../components/card'
+import TopPanel from '../components/TopPanel';
+import NavBar from '../components/navbar';
+import Footer from '../components/Footer';
+const about = ({title, imageURL, body, coverimgURL, boyimg, girlimg, menimg, womanimg, bannerimg, bannerimg2, banner3}) => {
     return (
         <div className="main">
+        <TopPanel bannerimg={bannerimg} bannerimg2={bannerimg2} banner3={banner3}/>
+        <div className="pg-block-title"> 
+        <h4 className="pg-title">Email Us: <strong>support@soyoung.co</strong></h4>
+        </div>
+        <div class="hr-theme-slash-2">
+         <div class="hr-line"></div>
+            <div class="hr-icon"><i class="material-icons"></i>❤</div>
+            <div class="hr-line"></div>
+        </div>
+        <NavBar />
         <div class="container-fluid" class="main-container" >
-        <img src={imageURL} alt="coverpic" class="cover_pic" />    
+        <img src={coverimgURL} alt="coverpic" class="cover_pic" />    
         </div>
         <div className="pc-block-title"> 
         <h2 className="pc-title"></h2>
-        <h4>Popular Collections</h4>
+        <h4 id="heading">Popular Collections</h4>
         <div className="pc-description">
             <h6>Visit our outlet to view amazing collection.</h6>
         </div>
         </div>
-        <div class="pt-layout-promo-box layout-inner-large"></div>
-        <div class="row pt-layout-promo-box">
-        <div class="col-sm-12 col-md-6">
-            <img src={womanimg} alt="girl" />
+       <React.Fragment>
+      
+       <div id="content">
+                    
+            
+                    <img src={boyimg} class="images" alt="boyimg" />
+              
+                     <img src={girlimg} class="images" alt="girlpic" />
+                     <img src={boyimg} class="images" alt="boyimg" />
+                  
         </div>
-        <div class="col-sm-12 col-md-6">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src={girlimg} alt="kid girl" />
-                </div>
-                <div class="col-sm-6">
-                    <img src={boyimg} alt="kid boy" />
-                </div>
-                <div class="col-sm-12">
-                    <img src={menimg} alt="boy" />
-                </div>
-            </div>
+       </React.Fragment>
+        <div className="pc-block-title"> 
+        <h2 className="pc-title"></h2>
+        <h4 id="heading"> Welcome to our Store</h4>
+        <div className="pc-description">
+            <h6>View Our Products</h6>
         </div>
         </div>
+        <div className="divider">
+        <div class="hr-theme-slash-2">
+         <div class="hr-line"></div>
+            <div class="hr-icon"><i class="material-icons"></i>❤</div>
+            <div class="hr-line"></div>
+        </div>
+        </div>
+        <React.Fragment>
+    <div class="container-fluid" >
+    <div class="row justify-content-center">
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     <div class="col d-flex justify-content-center align-items-center">
+     <Card title={title} imageURL={imageURL} body={body}/>
+     </div>
+     </div>
+     </div>
+     </React.Fragment>
+     <Footer />
         </div>
     )
 }
