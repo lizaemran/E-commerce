@@ -34,21 +34,39 @@ color: red;
     align-content:middle;
 }
 
-
+#bttnL{
+        background: white;
+        outline: none;
+        width:fit-content;
+        display: inline;
+        padding: 0.4rem;
+        margin-left: 10px;
+        margin-top: 16px;
+        color: red;
+        text-decoration: none;
+    
+}
 
 .imgg{
-    width:5.5em; 
-    height:6em;
+    width:90px; 
+    height:auto;
     padding-left:0;
     margin-left:-50px;
     object-fit: contain;
     vertical-align:text-top;
     padding-right:25px;
-    
+}
+.my-active{
+  background-color: #e02828!important;
+  color: white!important;
 }
 @import "./home";
 @import "./events";
 @import "./card";
-@import "./TopPanel.scss";
-@import "./footer.scss";
-@import "./sales.scss"
+@import "./TopPanel";
+@import "./footer";
+@import "./sales";
+@import "./newsletter";
+@import "./SignUp";
+@import "./index";
+@import "./bannerCard";

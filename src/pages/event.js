@@ -2,47 +2,34 @@ import React from 'react'
 import Card from '../components/card'
 import NavBar from '../components/navbar';
 import Footer from '../components/Footer';
-const event = ({title, imageURL, body, bill, setBill}) => {
+import ProductSideBar from '../components/ProductSideBar';
+import ProductTopMenu from '../components/ProductTopMenu';
+const event = ({findProductHandler, priceHandler, products,onAdd, onRemove, categoryHandler}) => {
     return (
-     <React.Fragment>
+        <div>
     <NavBar />
-    <div class="container-fluid" >
-    <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     </div>
+    <hr />
+    <div className="container-fluid" >
+        <div className="row">
+            <div className="col-12 d-flex justify-content-end align-content-center">
+                <ProductTopMenu findProductHandler={findProductHandler} priceHandler={priceHandler} />
+            </div>
+        </div>
+        <div className="row justify-content-center">
+            <div className="col-2">
+            <ProductSideBar categoryHandler={categoryHandler}/>
+            </div>
+            <div className="col-10">
+                <div className="row justify-content-start">
+        {products.map((product) => (
+        <Card onRemove={onRemove} onAdd={onAdd} key={product.id} product={product} />
+        ))}  
+    </div>
+    </div>
+    </div>
+    </div>
      <Footer />
-     </React.Fragment>
+     </div>
     
     )
         

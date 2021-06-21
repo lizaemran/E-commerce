@@ -1,21 +1,41 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
   
+export const Logo = styled.div`
+   margin-top: -15px;
+   margin-right: 10px;
+   padding-right: 100px;
+   margin-left: -139px;
+   @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+`;
 export const Nav = styled.nav`
   background: #ffffff;
   height: 85px;
   display: flex;
   width:100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: -100px;
   justify-content: center;
-  padding-top: 08px;
-  padding-left: 55px;
-  padding-right: 50px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
   z-index: 12;
   /* Third Nav */
   /* justify-content: flex-start; */
+  @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -30,8 +50,9 @@ export const NavLink = styled(Link)`
   padding-bottom: 0;
   height: 100%;
   cursor: pointer;
-  padding-left:100px;
-  margin-left:10px;
+  padding-left:65px;
+  margin-left:-35px;
+  padding-right: 60px;
   
   &.active {
     color: #000000;
@@ -39,38 +60,59 @@ export const NavLink = styled(Link)`
     transition: all 0.2s ease-in-out;
     
   }
+  @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
   
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -34px;
+  margin-right: -100px;
+  padding-right: 0px;
+  padding-left: 50px;
+  margin-left:90px;
   
+  @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
   /* width: 100vw;
   white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-    
-  }
+ 
 `;
   
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  padding-left:70px;
-  
+  padding-left:100px;
+  margin-left: 100px;
+  margin-right: -100px;
+    
   
   /* Third Nav */
   /* justify-content: flex-end;
   width: 100vw; */
-  
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
+  
+ 
 `;
 
 export const NavBtnLink = styled(Link)`
@@ -90,7 +132,13 @@ export const NavBtnLink = styled(Link)`
   margin-left: 32px;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #862e2e;
+    background: #e7d0c9;
     color: #f8f2f2;
+  }
+  @media screen and (max-width: 1200px) and (min-width: 600px), (max-width: 600px){
+    display:flex;
+    margin-right: 0px;
+    margin-left:0px;
+padding: 0px;
   }
 `;

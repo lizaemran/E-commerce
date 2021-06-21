@@ -3,7 +3,9 @@ import Card from '../components/card'
 import TopPanel from '../components/TopPanel';
 import NavBar from '../components/navbar';
 import Footer from '../components/Footer';
-const about = ({title, imageURL, body, coverimgURL, boyimg, girlimg, menimg, womanimg, bannerimg, bannerimg2, banner3}) => {
+import Newsletter from '../components/Newsletter';
+import Main from '../components/Main';
+const about = ({onRemove, onAdd, products, coverimgURL, boyimg, girlimg,  bannerimg, bannerimg2, banner3}) => {
     return (
         <div className="main">
         <TopPanel bannerimg={bannerimg} bannerimg2={bannerimg2} banner3={banner3}/>
@@ -52,24 +54,15 @@ const about = ({title, imageURL, body, coverimgURL, boyimg, girlimg, menimg, wom
             <div class="hr-line"></div>
         </div>
         </div>
-        <React.Fragment>
-    <div class="container-fluid" >
-    <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     </div>
-     </React.Fragment>
+        <Main products={products} onAdd={onAdd} onRemove={onRemove} />
+        <div className="divider" style={{paddingTop: "50px"}}>
+        <div class="hr-theme-slash-2">
+         <div class="hr-line"></div>
+            <div class="hr-icon"><i class="material-icons"></i>❤</div>
+            <div class="hr-line"></div>
+        </div>
+        </div>
+     <Newsletter />
      <Footer />
         </div>
     )

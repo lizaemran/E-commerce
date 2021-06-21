@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../components/navbar';
 import Footer from '../components/Footer';
 import Card from '../components/card'
-const team = ({title, imageURL, body,saleimg}) => {
+const team = ({saleimg}) => {
     return (
       <div>
       <NavBar />
@@ -23,44 +23,7 @@ const team = ({title, imageURL, body,saleimg}) => {
             <div class="hr-line"></div>
         </div>
         </div>
-        <React.Fragment>
-    <div class="container-fluid" >
-    <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     <div class="row justify-content-center">
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     <div class="col d-flex justify-content-center align-items-center">
-     <Card title={title} imageURL={imageURL} body={body}/>
-     </div>
-     </div>
-     </div>
-     <Footer />
-     </React.Fragment>
+      
     </div>
     )
 }

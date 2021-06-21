@@ -1,0 +1,50 @@
+body {
+	font-family: 'Varela Round', sans-serif;
+}	
+
+.modal-header {
+	border-bottom: none;   
+	position: relative;
+	border-radius: 0;
+}
+.modal-header h4 {
+	color: #000;
+	font-size: 30px;
+	margin: 0;
+	font-weight: bold;
+}
+
+
+.form-control {
+	min-height: 46px;
+	border-radius: 0;
+}
+.form-control {
+	box-shadow: none;
+	border-color: #dbdbdb;
+}
+.form-control:focus {
+	border-color: #f95858;
+	box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+}
+
+
+#bttn{
+    box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+	background: #f72222;
+	outline: none;
+}
+.button-top{
+	box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+	background: #f72222;
+	outline: none;
+	width:fit-content;
+	display: inline;
+}
+.input-group {
+	margin-top: 30px;
+}
+.hint-text {
+	margin: 100px auto;
+	text-align: center;
+}

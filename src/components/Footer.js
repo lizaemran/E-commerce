@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import {faHashtag, faEnvelope, faMobile, faCamera} from "@fortawesome/free-solid-svg-icons"
 
 const Footer = () => {
     return (
@@ -28,7 +28,7 @@ const Footer = () => {
                         <h3>So Young</h3>
                         <p>SoYoung is a female owned brand of thoughtfully-made lifestyle goods on a mission to make personal wellness sustainable, stylish and self-empowering.</p>
                     </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                    <div class="col item social"><a href="#"><FontAwesomeIcon icon={faMobile}/></a><a href="#"><FontAwesomeIcon icon={faHashtag}/></a><a href="#"><FontAwesomeIcon icon={faCamera}/></a><a href="#"><FontAwesomeIcon icon={faEnvelope}/></a></div>
                 </div>
                 <p class="copyright">Company Name © 2018</p>
             </div>
